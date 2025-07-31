@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form id="signUp" onsubmit="return validateForm()" action="signup_process.php" method="POST">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required><br><br>
+        <label for="pwd">Password: </label>
+        <input type="text" id="pwd" name="pwd" placeholder="Create a new password" required><br><br>
+        <label for="confirm_pwd">Confirm Password: </label>
+        <input type="text" id="confirm_pwd" name="confirm_pwd" placeholder="Confirm password" required><br><br>
+        <label for="secret_key">Secret Key: </label>
+        <input type="text" id="secret_key" name="secret_key" placeholder="Enter a secret key" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var pwd = document.getElementById('pwd').value;
+        var confirm_pwd = document.getElementById('confirm_pwd').value;
+
+        if (name === '' || email === '' || pwd === '' || confirm_pwd === '') {
+            alert('Please fill in all the fields');
+            return false;
+        }
+
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address');
+            return false;
+        }
+
+        if (pwd !== confirm_pwd) {
+            alert('Passwords do not match');
+            return false;
+        }
+
+        return true; // Allow submission if all is good
+    }
+
+    function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+    </script>
+</body>
+</html>
