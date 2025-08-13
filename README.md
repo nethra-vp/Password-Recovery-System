@@ -1,16 +1,17 @@
 # 🔐 Password Recovery System
 
-A simple **Password Recovery System** built with **HTML, CSS, JavaScript, PHP, and MySQL** running on **XAMPP**.  
-It includes a secure login system, new user registration, and a "Forgot Password" feature.
+A simple **Password Recovery System** built using **HTML, CSS, JavaScript, PHP, and MySQL**.  
+It includes user login, account registration, and a secure "Forgot Password" feature.  
+Runs locally on **XAMPP**.
 
 ---
 
 ## 📌 Features
-- **Login Page** – Allows existing users to log in securely.
-- **Sign Up Page** – Create an account with username, email, and password.
-- **Forgot Password** – Reset your password using your registered email.
-- **Password Validation** – Ensures strong passwords before submission.
-- **Responsive Design** – Works on desktop and mobile devices.
+- **Login** – Secure user authentication.
+- **Registration** – Create new accounts with unique credentials.
+- **Forgot Password** – Reset account password via registered email.
+- **Password Strength Check** – Encourages strong, secure passwords.
+- **Responsive Design** – Works on all screen sizes.
 
 ---
 
@@ -18,5 +19,6 @@ It includes a secure login system, new user registration, and a "Forgot Password
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** PHP (running on XAMPP Apache)
 - **Database:** MySQL (phpMyAdmin)
+
 
 
